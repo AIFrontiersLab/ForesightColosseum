@@ -1,0 +1,84 @@
+tournament:
+  question: >
+    What AI technologies, architectures, protocols, infrastructure layers,
+    and engineering practices are most likely to become strategically important
+    during the next three years?
+
+  horizon_years: 3
+  forecaster_count: 5
+  predictions_each: 7
+  mode: standard
+
+  research:
+    enabled: true
+    max_sources: 25
+
+  calibration_weights:
+    forecaster: 0.50
+    challenger: 0.20
+    judge: 0.30
+
+  ranking_weights:
+    calibrated_confidence: 0.25
+    strategic_importance: 0.20
+    prediction_quality: 0.20
+    consensus: 0.15
+    novelty: 0.10
+    evidence_strength: 0.10
+
+  partial_outcome_values:
+    "TRUE": 1.0
+    "PARTIALLY_TRUE": 0.5
+    "FALSE": 0.0
+
+  cost_controls:
+    max_predictions_per_forecaster: 10
+    max_research_sources: 25
+    max_verification_searches: 10
+    token_limit_hint: 8000
+
+  forecasters:
+    - id: architect
+      name: Technology Architect
+      role: FORECASTER 1 — Technology Architect
+      focus:
+        - technical architecture
+        - scalability
+        - developer adoption
+        - platform evolution
+
+    - id: researcher
+      name: Research Analyst
+      role: FORECASTER 2 — Research Analyst
+      focus:
+        - research momentum
+        - papers
+        - benchmarks
+        - academic developments
+
+    - id: enterprise
+      name: Enterprise Strategist
+      role: FORECASTER 3 — Enterprise Strategist
+      focus:
+        - enterprise adoption
+        - security
+        - governance
+        - ROI
+
+    - id: developer
+      name: Developer Ecosystem Analyst
+      role: FORECASTER 4 — Developer Ecosystem Analyst
+      focus:
+        - GitHub
+        - open source
+        - SDKs
+        - developer activity
+        - standards
+
+    - id: contrarian
+      name: Contrarian Futurist
+      role: FORECASTER 5 — Contrarian Futurist
+      focus:
+        - underestimated technologies
+        - second-order effects
+        - non-obvious shifts

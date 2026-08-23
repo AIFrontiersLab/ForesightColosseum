@@ -1,0 +1,8 @@
+httpx[http2]>=0.27
+pydantic>=2.7
+pydantic-settings>=2.3
+python-dotenv>=1.0
+pyyaml>=6.0
+rapidfuzz>=3.9
+tenacity>=8.5
+pytest>=8.0

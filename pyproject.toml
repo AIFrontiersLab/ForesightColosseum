@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foresight-colosseum"
+version = "0.1.0"
+description = "ForesightColosseum — multi-agent AI technology forecasting tournament with immutable ledger"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "httpx[http2]>=0.27",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "python-dotenv>=1.0",
+  "pyyaml>=6.0",
+  "rapidfuzz>=3.9",
+  "tenacity>=8.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+prediction-tournament = "app.prediction_tournament.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

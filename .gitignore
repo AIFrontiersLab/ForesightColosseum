@@ -1,0 +1,34 @@
+# Secrets & local env
+.env
+.env.local
+*.pem
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime / generated
+logs/
+outputs/prediction_tournament/**
+!outputs/prediction_tournament/.gitkeep
+data/prediction_tournament/**
+!data/prediction_tournament/.gitkeep
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
